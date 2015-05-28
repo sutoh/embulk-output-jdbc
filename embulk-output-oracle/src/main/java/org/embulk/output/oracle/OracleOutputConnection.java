@@ -97,7 +97,7 @@ public class OracleOutputConnection
         StringBuilder sb = new StringBuilder();
 
         sb.append("CREATE TABLE ");
-        quoteIdentifierString(sb, name);
+        sb.append(name);
         sb.append(buildCreateTableSchemaSql(schema));
         return sb.toString();
     }
